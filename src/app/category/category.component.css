@@ -5,3 +5,7 @@ li {
 div.panel-heading {
    font-size: x-large; 
 }
+
+.btn-add-product {
+    background-color: darkslateblue;
+}

@@ -1,0 +1,40 @@
+
+<div class="row">
+  
+<div class='panel panel-primary' >
+  <div class='panel-heading' style='font-size:large'> {{pageTitle}} </div>
+      <div class='panel-body'>
+        <!--<p>
+          <label> ID: <input type ="number" value="" [(ngModel)]="data.id"/></label><br/>{{data.id}}
+        </p>-->
+        <p>
+          <label> Name: <input type="text" [(ngModel)]="data.productName" /></label><br/>{{data.productName}}
+        </p>
+        <p>
+          <label> Code: <input type ="text" [(ngModel)]="data.productCode"/></label><br/>{{data.productCode}}
+        </p>
+        <p>
+          <label> Description: <input type="text" [(ngModel)]="data.description" /></label><br/>{{data.description}}
+        </p>
+        <p>
+          <label> ReleaseDate: <input type="date" [(ngModel)]="data.releaseDate "  /></label><br/>{{data.releaseDate | date:'mediumDate'}}
+        </p>
+        <p>
+          <label> Price: <input  type ="number" min="1"  [(ngModel)]="data.price" /></label><br/>{{data.price}}
+        </p>
+        <p>
+          <label> StarRating: <input  type ="number" min="1" max="5" [(ngModel)]="data.starRating" /></label><br/>{{data.starRating}}
+        </p>
+      </div>
+</div>
+
+<div class='panel-footer'>
+  <a class='btn btn-default' (click)='goBack()' style='width:80px'>
+    <i class='glyphicon glyphicon-chevron-left'></i> Back
+  </a>
+  <button type="submit" *ngIf="!isUpdate"  class="btn btn-success" (click)='addProduct(data)'>Add Product</button>
+  <button type="submit" *ngIf="isUpdate" class="btn btn-success" (click)='updateProduct(data)'>Update Product</button>
+  <!--<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>  -->
+  
+</div>
+</div>

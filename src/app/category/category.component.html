@@ -1,0 +1,51 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>{{pageTitle}}
+        <button class='btn btn-primary pull-right btn-add-product' > Add Category </button>
+    </div>
+
+    <!-- Filter the Products   -->
+    <div class='panel-body'>
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <!--<tbody>
+                    <tr *ngFor='let product of products | productFilter:listFilter'>
+                        <td>
+                            <img *ngIf='showImage'
+                                 [src]='product.imageUrl'
+                                 [title]='product.productName | uppercase'
+                                 [style.width.px]='imageWidth' 
+                                 [style.margin.px]='imageMargin'>
+                        </td>
+                        <td><a [routerLink]="['/product', product.id]">
+                            {{product.productName}}
+                            </a>
+                        </td>
+                        <td>{{ product.productCode | lowercase }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>{{ product.price | currency:'USD':true:'1.2-2' }}</td>
+                        <td>
+                            <ai-star [rating]='product.starRating'
+                                    (ratingClicked)='onRatingClicked($event)'>
+                            </ai-star>
+                       </td>
+                       <td>
+                       <button class='btn btn-primary'(click)='updateProduct(product.id)'> Update </button>
+                       <button class='btn btn-primary'(click)="deleteProduct(product.id, product.productName)">Delete</button>
+                       </td>
+                    </tr>
+                </tbody>-->
+            </table>
+        </div>
+    </div>
+</div>
